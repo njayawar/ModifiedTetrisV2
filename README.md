@@ -8,7 +8,7 @@ Navod Jayawardhane
 My design is a mix of a Tetris/Stacker game. The game is played on a 8x9 LED matrix, with blocks
 of 1 pixel in size. The top bar of the game will be dedicated to the dropper, which will consist of a
 single pixel bouncing across the row.
-Whenever the player presses a buƩon, the bouncing pixel will stop, and a dropping animaƟon
+Whenever the player presses a buƩon, the bouncing pixel will stop, and a dropping animation
 will start, where a stream of green pixels light up in the corresponding column, and when the
 pixel hits the boƩom, a steady blue pixel will light up. The bouncing pixel resumes and the player
 keeps placing blocks.
@@ -31,17 +31,17 @@ The 100KHz clock is split into slower enables to control the bouncing pixel spee
 
 ## Inputs/Outputs
 
-Outputs:
-Pin 1 – Game Status (0 = Stopped, 1 = Playing)
-Pin 2-4 – Bouncing Pixel locaƟon (routed directly to the display)
+Outputs:  
+Pin 1 – Game Status (0 = Stopped, 1 = Playing)  
+Pin 2-4 – Bouncing Pixel location (routed directly to the display)  
 Pin 5-12 – Update value (value corresponding to the state of the column or points score – MUXed as
 requested by the microcontroller)
 
-Inputs:
-Pin 1 – Drop block (buƩon input)
-Pin 2 – Reset/Start Game
-Pin 3-8 – IniƟal Speed/Difficulty (staƟcally set by the microcontroller to set the iniƟal game clock)
-Pin 9-12 – Update Request LocaƟon (set by the microcontroller to MUX the outputs to update the game
+Inputs:  
+Pin 1 – Drop block (buƩon input)  
+Pin 2 – Reset/Start Game  
+Pin 3-8 – IniƟal Speed/Difficulty (staƟcally set by the microcontroller to set the iniƟal game clock)  
+Pin 9-12 – Update Request LocaƟon (set by the microcontroller to MUX the outputs to update the game  
 state on the microcontroller – locaƟons include the 8 columns and point score)
 
 A 100KHz clock is required to keep game timing.
