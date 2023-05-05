@@ -20,9 +20,9 @@ documentation:
   how_to_test:  "Designed for an external 100KHz clock. Interface chip with the decoding Raspberry pi and play with the provided GUI, or set up a PCB to display the game on LEDs"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   external_hw:  "Raspberry Pi to decode the game state required, as well as a 100KHz clock generator. Optionally use GPIO expanders and LEDs to play the game."      # Describe any external hardware needed
   language:     "SystemVerilog, Python" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     "README.md"      # URL to longer form documentation, eg the README.md in your repository
+  doc_link:     "https://github.com/njayawar/ModifiedTetrisV2/blob/main/README.md"      # URL to longer form documentation, eg the README.md in your repository
   clock_hz:     100000       # Clock frequency in Hz (if required)
-  picture:      "ModifiedTetrisV2/example_photo.png"      # relative path to a picture in your repository
+  # picture:      "ModifiedTetrisV2/example_photo.png"      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
     - io_in[0]    - Drop Button
     - io_in[1]    - New Game Button
