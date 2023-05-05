@@ -3,7 +3,6 @@ project:
   source_files:
     - toplevel_chip.v
     - chip.sv
-    - decoder.v
   top_module:  "toplevel_chip"
 
 # As everyone will have access to all designs, try to make it easy for someone new to your design to know what
@@ -13,33 +12,24 @@ project:
 #
 # This info will be automatically collected and used to make a datasheet for the chip.
 documentation: 
-  author:       "PLACEHOLDER"      # Your name
+  author:       "Navod Jayawardhane"      # Your name
   discord:      ""      # Your discord handle
-  title:        "PLACEHOLDER"      # Project title
-  description:  "PLACEHOLDER"      # Short description of what your project does
-  how_it_works: "PLACEHOLDER"      # Longer description of how the project works
-  how_to_test:  "PLACEHOLDER"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
-  external_hw:  "PLACEHOLDER"      # Describe any external hardware needed
-  language:     "verilog" # other examples include Verilog, Amaranth, VHDL, etc
-  doc_link:     ""      # URL to longer form documentation, eg the README.md in your repository
-  clock_hz:     1000       # Clock frequency in Hz (if required)
-  picture:      ""      # relative path to a picture in your repository
+  title:        "ModifiedTetrisV2"      # Project title
+  description:  "A combination of Tetris and Stacker"      # Short description of what your project does
+  how_it_works: "Pixel on top bounces from left to right - drop pixel with a button push and stack pixels to eliminate rows and score points. Reaching the top of the board ends the game."      # Longer description of how the project works
+  how_to_test:  "Designed for an external 100KHz clock. Interface chip with the decoding Raspberry pi and play with the provided GUI, or set up a PCB to display the game on LEDs"      # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
+  external_hw:  "Raspberry Pi to decode the game state required, as well as a 100KHz clock generator. Optionally use GPIO expanders and LEDs to play the game."      # Describe any external hardware needed
+  language:     "SystemVerilog, Python" # other examples include Verilog, Amaranth, VHDL, etc
+  doc_link:     "README.md"      # URL to longer form documentation, eg the README.md in your repository
+  clock_hz:     100000       # Clock frequency in Hz (if required)
+  picture:      "ModifiedTetrisV2/example_photo.png"      # relative path to a picture in your repository
   inputs:               # a description of what the inputs do
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - io_in[0]    - Drop Button
+    - io_in[1]    - New Game Button
+    - io_in[5:2]  - Update Request Location (for Raspberry Pi decoding)
+    - io_in[11:5] - Initial Game Speed (statically set initial difficulty)
   outputs:
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
-    - none
+    - io_out[0]    - Game Running LED
+    - io_out[3:1]  - Bounce position of the top pixel
+    - io_out[11:4] - Update Value (response to the Update Request Location from Raspberry Pi decoder)
 
