@@ -13,7 +13,6 @@
 
 To add images, upload them into the repo and use the following format to embed them in markdown:
 
-// ![](image1.png)
 
 ## Inputs/Outputs
 
