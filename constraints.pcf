@@ -1,0 +1,122 @@
+#Special Function Pins
+set_io clk100 P7
+set_io reset_n P8
+set_io base_led[0] J11
+set_io base_led[1] K11
+set_io base_led[2] K12
+set_io base_led[3] K14
+set_io base_led[4] L12
+set_io base_led[5] L14
+set_io base_led[6] M12
+set_io base_led[7] N14
+set_io uart_rx P14
+set_io uart_tx M9
+
+set_io A20 A1
+set_io A21 A2
+set_io A23 A3
+set_io A24 A4
+set_io A27 A5
+set_io B2 A6
+set_io B3 A7
+set_io B5 A10
+set_io B6 A11
+set_io B11 A12
+
+set_io A15 B1
+set_io B12 B14
+
+set_io A14 C1
+set_io A18 C3
+set_io A31 C4
+set_io A28 C5
+set_io B49 C6
+set_io B48 C7
+set_io B8 C9
+set_io B9 C10
+set_io B40 C11
+set_io B39 C12
+set_io B14 C14
+
+set_io A12 D1
+set_io A17 D3
+set_io A33 D4
+set_io A30 D5
+set_io B46 D6
+set_io B45 D7
+set_io B43 D9
+set_io B42 D10
+set_io B37 D11
+set_io B36 D12
+set_io B15 D14
+
+set_io A11 E1
+set_io A34 E4
+set_io B34 E11
+set_io B18 E12
+set_io B17 E14
+
+set_io A37 F3
+set_io A36 F4
+set_io B33 F11
+set_io B31 F12
+set_io B20 F14
+
+set_io A8 G1
+set_io A9 G3
+set_io A40 G4
+set_io B28 G11
+set_io B30 G12
+set_io B21 G14
+
+set_io A42 H1
+set_io A43 H3
+set_io A39 H4
+set_io B27 H11
+set_io B23 H12
+
+set_io A5 J1
+set_io A6 J3
+#set_io D49 J11 #led[0]
+set_io btn[3] J12
+
+set_io A45 K3
+set_io A46 K4
+#set_io D48 K11 #led[1]
+#set_io D2 K12 #led[2]
+#set_io D3 K14 #led[3]
+
+set_io A3 L1
+set_io C5 L4
+set_io C6 L5
+set_io C43 L6
+set_io C42 L8
+set_io C11 L9
+#set_io D46 L12 #led[4]
+#set_io D45 L14 #led[5]
+
+set_io A2 M1
+set_io C2 M3
+set_io C3 M4
+set_io C8 M6
+set_io C9 M7
+#set_io D14 M9 #usb_tx
+set_io D24 M11 #MOSI
+#set_io D5 M12 #led[6]
+
+set_io A48 N1
+#set_io D6 N14 #led[7]
+
+set_io A49 P1
+set_io btn[4] P2
+set_io C48 P3
+set_io C46 P4
+set_io C45 P5
+#set_io D40 P7 #clk
+#set_io D39 P8 #Reset
+set_io C40 P9
+set_io C39 P10
+set_io D23 P11 #MISO
+set_io D27 P12 #SCK
+set_io D28 P13 #SS
+#set_io D15 P14 #USB_rx
