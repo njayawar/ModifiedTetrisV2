@@ -16,7 +16,7 @@ Whenever a full row of blocks is placed, the row is eliminated and the game shif
 score, shown on 3 7-segment displays, is incremented. AŌer a certain score, the bouncing will
 speed up to increase the difficulty. If the stack of blocks reaches the top row, the game will end.
 A single status LED will illuminate green or red based on whether the game is in play, and a reset
-buƩon will act as the start game buƩon.
+buƩon will act as the start game button.
 
 ## How it Works
 
